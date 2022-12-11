@@ -8,3 +8,8 @@ Requesitos
 3. Ao adicionar ir listando o cadastro
 4. Ao clicar com a direita num registro na listagem ter a opção de alterar e excluir
 5. Colocar um label abaixo da listagem com a quantidade total de registros
+
+
+### Result
+
+![image](https://user-images.githubusercontent.com/100242220/206924991-0eef8522-1e57-4cf6-bb4d-f0d66d103eb3.png)
