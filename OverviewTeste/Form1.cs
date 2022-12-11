@@ -23,7 +23,7 @@ namespace OverviewTeste
         }
 
         // CONTADOR DE REGISTRO
-        int countreg = 0;
+        int countReg = 0;
         private void contador(int countreg)
         {
             label3.Text = "QUANTIDADE DE REGISTRO: ";
@@ -36,15 +36,14 @@ namespace OverviewTeste
             // Validar Nome para não ser vazio (trim retirar espaços antes e depois e comparar se é vazia)
             if (txtNome.Text.Trim().Equals(string.Empty))
             {
-                MessageBox.Show("O nome não você ser vazio", Text, MessageBoxButtons.OK, MessageBoxIcon.Error); // Título do formulário
+                MessageBox.Show("O nome não pode ser vazio", Text, MessageBoxButtons.OK, MessageBoxIcon.Error); // Título do formulário
                 return;
             }
 
-            ListViewItem item = new ListViewItem();
-            item.SubItems.Add(txtNome.Text.Trim());
+            ListViewItem item = new ListViewItem(txtNome.Text.Trim());
             item.SubItems.Add(dtpNascimento.Text);
-            countreg += 1;
-            contador(countreg);
+            countReg += 1;
+            contador(countReg);
             listView1.Items.Add(item);
         }
         // MÉTODO RIGHT CLICK NA LISTVIEW - ContextMenuStrip
@@ -56,8 +55,8 @@ namespace OverviewTeste
         // MÉTODO BOTÃO REMOVER - ContextMenuStrip 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            countreg -= 1;
-            contador(countreg);
+            countReg -= 1;
+            contador(countReg);
             listView1.Items.RemoveAt(listView1.SelectedIndices[0]);
             
         }
